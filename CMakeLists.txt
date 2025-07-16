@@ -79,7 +79,7 @@ if(NEC_VE)
 
 	add_link_options(-ftrace)
 else()
-	set(OPT_FLAGS -O3 )#-ffast-math)
+	set(OPT_FLAGS -O3 -ffast-math)
 	if(CMAKE_CXX_COMPILER_ID STREQUAL "IntelLLVM")
 		set(OPT_FLAGS ${OPT_FLAGS} -fp-model=fast -fvec-peel-loops)
 	endif()
